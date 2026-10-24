@@ -1,0 +1,14 @@
+width: 3
+layers: 2
+lmax: 2
+num_rbf: 8
+conv_cutoff: 4.5
+pair_cutoff: 5.5
+correlation: 2
+attention: true
+attention_heads: 2
+aggregation: sum_attention
+persistent_pair: true
+enhanced_fusion: true
+physics_residual: false
+independent_heads: false

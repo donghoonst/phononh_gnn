@@ -1,0 +1,14 @@
+{
+  "HamGNN": {
+    "commit": "64dba1dbf445ccfa2683f560059c3fbca0df624a"
+  },
+  "mace": {
+    "commit": "7913afb6fa729878d20886b84a2079523727d958"
+  },
+  "e3nn": {
+    "commit": "2aa7f58440a06b15352a2cbce01fa4c26f824969"
+  },
+  "phonopy": {
+    "commit": "423d13ee822bf0e11b9f8eadb7220e9cff18e78e"
+  }
+}
