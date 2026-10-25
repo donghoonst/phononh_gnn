@@ -10,6 +10,7 @@ dependencies = ["torch>=2.2", "e3nn>=0.5", "numpy", "ase", "phonopy>=2.30", "mat
 
 [project.optional-dependencies]
 test = ["pytest"]
+notebook = ["jupyterlab>=4", "nbformat>=5", "nbclient>=0.10", "black>=24"]
 
 [project.scripts]
 ifc2 = "ifc2.cli:main"

@@ -1,5 +1,27 @@
 # IFC2 Pair GNN — 연구용 기준 구현
 
+## 한국어 통합 주피터 노트북
+
+**[IFC2_All_in_One_Korean.ipynb 열기](notebooks/IFC2_All_in_One_Korean.ipynb)** · **[노트북 파일 다운로드](https://github.com/donghoonst/phononh_gnn/raw/refs/heads/main/notebooks/IFC2_All_in_One_Korean.ipynb)**
+
+노트북 하나에 데이터 처리·GNN·loss·학습·추론·Phonopy 비교·테스트·ablation 코드를 직접 담았습니다. 별도 `ifc2` 패키지나 저장소 clone 없이 실행할 수 있으며, 한국어 설명과 상세 주석으로 **수식 → tensor shape → 연산 → 결과**를 연결합니다. 실행한 출력과 그래프도 포함합니다.
+
+1. 위 `.ipynb` 파일을 내려받아 JupyterLab 또는 Google Colab에서 엽니다. GitHub에서는 읽기만 가능합니다.
+2. Python 3.12 이상 kernel을 선택하고 처음부터 순서대로 실행합니다. 첫 셀은 없는 외부 라이브러리를 설치하며 기존 PyTorch는 유지합니다.
+3. 기본 실습은 합성 데이터, CPU, 17개 테스트, 작은 학습과 A–F/대조군 비교입니다. 실제 DFT 결과로 해석하지 마세요.
+4. 14절에서 모델/epoch를, 18절에서 실제 데이터 경로를 설정합니다. 결과는 실행한 폴더의 `ifc2_notebook_runs/실행ID/`에 저장됩니다.
+
+로컬 JupyterLab 실행 예:
+
+```bash
+python -m pip install jupyterlab
+python -m jupyterlab IFC2_All_in_One_Korean.ipynb
+```
+
+개발자가 노트북을 재생성/검증하려면 `pip install -e '.[test,notebook]'`, `python scripts/build_notebook.py`, `python scripts/validate_notebook.py`를 사용합니다. 생성기는 원본 구현에 한국어 설명/주석을 붙이고, 검증기는 원본과 함수 AST가 같은지 확인한 뒤 **프로젝트 import를 차단한 임시 폴더**에서 전체 노트북을 실행합니다. 결과는 `docs/notebook_validation.json`에 기록됩니다.
+
+## 모듈형 프로젝트
+
 결정 구조에서 3×3 IFC2를 직접 예측하는 실행 가능한 PyTorch/e3nn 프로젝트다. 코드·학습·추론·Phonopy 비교 경로를 CPU에서 검증했다. **실제 DFT 성능과 연구 신규성은 아직 검증하지 않았다.** 사용자 제공 Zenodo 데이터는 현재 환경 프록시 403 때문에 내려받지 못했다. 결과는 명시적으로 표시한 합성 harmonic 데이터의 smoke 실험이다.
 
 - [기존 코드 감사](docs/AUDIT.md): 확인한 근거, 라이선스, 오류·미검증 사항
