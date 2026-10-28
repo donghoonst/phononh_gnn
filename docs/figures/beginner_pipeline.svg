@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="365" viewBox="0 0 880 365" role="img" aria-labelledby="title desc">
+<title id="title">구조에서 포논까지 여섯 단계</title>
+<desc id="desc">원자 구조, 이웃 그래프, GNN 예측, 물리 규칙 적용, 동역학 행렬, 포논 주파수 순서입니다. GNN이 힘 상수를 예측하고 그 뒤는 물리 계산으로 이어집니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#54818a"/></marker></defs>
+<rect width="880" height="365" fill="#fff"/>
+<g stroke="#54818a" stroke-width="3" fill="none" marker-end="url(#arrow)">
+<path d="M 280 85 H 302"/><path d="M 570 85 H 592"/><path d="M 730 145 V 212"/>
+<path d="M 600 280 H 578"/><path d="M 310 280 H 288"/>
+</g>
+<g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="20" y="25" width="260" height="120" rx="12" fill="#f5f7fa" stroke="#ccd9df"/>
+<text x="38" y="53" fill="#43777f" font-size="15" font-weight="bold">01</text>
+<text x="38" y="86" fill="#142d43" font-size="24" font-weight="bold">원자 구조</text>
+<text x="38" y="119" fill="#405260" font-size="16">어떤 원자가 어디에 있을까?</text>
+</g><g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="310" y="25" width="260" height="120" rx="12" fill="#f5f7fa" stroke="#ccd9df"/>
+<text x="328" y="53" fill="#43777f" font-size="15" font-weight="bold">02</text>
+<text x="328" y="86" fill="#142d43" font-size="24" font-weight="bold">이웃 그래프</text>
+<text x="328" y="119" fill="#405260" font-size="16">누가 누구의 가까운 이웃일까?</text>
+</g><g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="600" y="25" width="260" height="120" rx="12" fill="#e9f3f2" stroke="#ccd9df"/>
+<text x="618" y="53" fill="#43777f" font-size="15" font-weight="bold">03</text>
+<text x="618" y="86" fill="#142d43" font-size="24" font-weight="bold">GNN 예측</text>
+<text x="618" y="119" fill="#405260" font-size="16">이웃 정보를 모아 IFC를 예측</text>
+</g><g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="600" y="220" width="260" height="120" rx="12" fill="#f5f7fa" stroke="#ccd9df"/>
+<text x="618" y="248" fill="#43777f" font-size="15" font-weight="bold">04</text>
+<text x="618" y="281" fill="#142d43" font-size="24" font-weight="bold">물리 규칙 적용</text>
+<text x="618" y="314" fill="#405260" font-size="16">쌍 교환 관계와 ASR 정리</text>
+</g><g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="310" y="220" width="260" height="120" rx="12" fill="#f5f7fa" stroke="#ccd9df"/>
+<text x="328" y="248" fill="#43777f" font-size="15" font-weight="bold">05</text>
+<text x="328" y="281" fill="#142d43" font-size="24" font-weight="bold">동역학 행렬</text>
+<text x="328" y="314" fill="#405260" font-size="16">힘 상수 + 질량 + 공간적 위상</text>
+</g><g font-family="Noto Sans CJK KR, Noto Sans, sans-serif">
+<rect x="20" y="220" width="260" height="120" rx="12" fill="#f5f7fa" stroke="#ccd9df"/>
+<text x="38" y="248" fill="#43777f" font-size="15" font-weight="bold">06</text>
+<text x="38" y="281" fill="#142d43" font-size="24" font-weight="bold">포논 주파수</text>
+<text x="38" y="314" fill="#405260" font-size="16">어떤 진동이 얼마나 빠를까?</text>
+</g></svg>

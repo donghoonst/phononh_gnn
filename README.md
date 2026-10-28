@@ -1,5 +1,11 @@
 # IFC2 Pair GNN — 연구용 기준 구현
 
+## 처음 읽는 분을 위한 쉬운 설명서
+
+**[공과 용수철로 이해하는 Phonon GNN](docs/BEGINNER_GUIDE_KO.md)** · **[PDF 보기 — 25쪽](docs/BEGINNER_GUIDE_KO.pdf)** · **[PDF 다운로드](https://github.com/donghoonst/phononh_gnn/raw/refs/heads/main/docs/BEGINNER_GUIDE_KO.pdf)**
+
+공과 용수철의 움직임에서 시작해 원자 이웃 관계, GNN 학습, 힘 상수, 포논 그래프까지 차근차근 설명합니다. 12개 장과 수식·용어·검증 근거 부록을 담았으며, 노트북 실행 순서와 현재 확인된 성과·남은 문제도 함께 정리했습니다.
+
 ## 한국어 통합 주피터 노트북
 
 **[IFC2_All_in_One_Korean.ipynb 열기](notebooks/IFC2_All_in_One_Korean.ipynb)** · **[노트북 파일 다운로드](https://github.com/donghoonst/phononh_gnn/raw/refs/heads/main/notebooks/IFC2_All_in_One_Korean.ipynb)**
