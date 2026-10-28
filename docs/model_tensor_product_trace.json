@@ -1,0 +1,586 @@
+{
+  "purpose": "Untrained model shape trace and a toy equivariance check; not a DFT benchmark",
+  "torch_version": "2.14.1+cpu",
+  "e3nn_version": "0.6.0",
+  "seed": 17,
+  "fixture_seed": 0,
+  "config": {
+    "width": 3,
+    "layers": 2,
+    "lmax": 2,
+    "num_rbf": 8,
+    "conv_cutoff": 4.5,
+    "pair_cutoff": 5.5,
+    "correlation": 2,
+    "attention": true,
+    "attention_heads": 2,
+    "aggregation": "sum_attention",
+    "persistent_pair": true,
+    "enhanced_fusion": true,
+    "physics_residual": false,
+    "independent_heads": false
+  },
+  "hidden_irreps": "3x0e+3x1o+3x1e+3x2o+3x2e",
+  "hidden_dimension": 51,
+  "parameters": 19033,
+  "geometry_shapes": {
+    "z": [
+      3
+    ],
+    "conv_index": [
+      2,
+      26
+    ],
+    "pair_index": [
+      2,
+      51
+    ],
+    "pair_vectors": [
+      60,
+      3
+    ],
+    "radial": [
+      26,
+      8
+    ],
+    "spherical_harmonics": [
+      26,
+      9
+    ],
+    "envelope": [
+      26
+    ]
+  },
+  "output_shapes": {
+    "pairs": [
+      51,
+      3,
+      3
+    ],
+    "images": [
+      60,
+      3,
+      3
+    ],
+    "compact": [
+      3,
+      24,
+      3,
+      3
+    ],
+    "dynamical_matrix": [
+      1,
+      9,
+      9
+    ]
+  },
+  "toy_tensor_product": {
+    "a": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "b": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "outer": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "trace_part": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "skew": [
+      [
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        -0.5,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "symmetric_traceless": [
+      [
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.5,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "e3nn_output_irreps": "1x0e+1x1e+1x2e",
+    "e3nn_output_shape": [
+      9
+    ],
+    "equivariance_max_errors": {
+      "rotation": 1.762479051592436e-15,
+      "inversion_and_rotation": 1.762479051592436e-15
+    }
+  },
+  "module_trace": [
+    {
+      "module": "embedding",
+      "inputs": [
+        [
+          3
+        ]
+      ],
+      "output": [
+        3,
+        3
+      ]
+    },
+    {
+      "module": "embed",
+      "inputs": [
+        [
+          3,
+          3
+        ]
+      ],
+      "output": [
+        3,
+        51
+      ]
+    },
+    {
+      "module": "pair_init.radial",
+      "inputs": [
+        [
+          60,
+          8
+        ]
+      ],
+      "output": [
+        60,
+        450
+      ]
+    },
+    {
+      "module": "pair_init",
+      "inputs": [
+        [
+          60,
+          102
+        ],
+        [
+          60,
+          9
+        ],
+        [
+          60,
+          8
+        ],
+        [
+          60
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "layers.0.message.radial",
+      "inputs": [
+        [
+          26,
+          8
+        ]
+      ],
+      "output": [
+        26,
+        225
+      ]
+    },
+    {
+      "module": "layers.0.message",
+      "inputs": [
+        [
+          26,
+          51
+        ],
+        [
+          26,
+          9
+        ],
+        [
+          26,
+          8
+        ],
+        [
+          26
+        ]
+      ],
+      "output": [
+        26,
+        51
+      ]
+    },
+    {
+      "module": "layers.0.score",
+      "inputs": [
+        [
+          26,
+          14
+        ]
+      ],
+      "output": [
+        26,
+        2
+      ]
+    },
+    {
+      "module": "layers.0.att_mix",
+      "inputs": [
+        [
+          3,
+          102
+        ]
+      ],
+      "output": [
+        3,
+        51
+      ]
+    },
+    {
+      "module": "layers.0.products.0",
+      "inputs": [
+        [
+          3,
+          51
+        ],
+        [
+          3,
+          51
+        ]
+      ],
+      "output": [
+        3,
+        51
+      ]
+    },
+    {
+      "module": "layers.0.gate.gate",
+      "inputs": [
+        [
+          3,
+          3
+        ]
+      ],
+      "output": [
+        3,
+        12
+      ]
+    },
+    {
+      "module": "layers.0",
+      "inputs": [
+        [
+          3,
+          51
+        ],
+        [
+          2,
+          26
+        ],
+        [
+          26,
+          8
+        ],
+        [
+          26,
+          9
+        ],
+        [
+          26
+        ]
+      ],
+      "output": [
+        3,
+        51
+      ]
+    },
+    {
+      "module": "pair_updates.0",
+      "inputs": [
+        [
+          60,
+          102
+        ],
+        [
+          60,
+          9
+        ],
+        [
+          60,
+          8
+        ],
+        [
+          60
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "pair_context",
+      "inputs": [
+        [
+          60,
+          102
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "pair_products.0",
+      "inputs": [
+        [
+          60,
+          51
+        ],
+        [
+          60,
+          51
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "pair_gates.0.gate",
+      "inputs": [
+        [
+          60,
+          3
+        ]
+      ],
+      "output": [
+        60,
+        12
+      ]
+    },
+    {
+      "module": "layers.1",
+      "inputs": [
+        [
+          3,
+          51
+        ],
+        [
+          2,
+          26
+        ],
+        [
+          26,
+          8
+        ],
+        [
+          26,
+          9
+        ],
+        [
+          26
+        ]
+      ],
+      "output": [
+        3,
+        51
+      ]
+    },
+    {
+      "module": "pair_updates.1",
+      "inputs": [
+        [
+          60,
+          102
+        ],
+        [
+          60,
+          9
+        ],
+        [
+          60,
+          8
+        ],
+        [
+          60
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "pair_context",
+      "inputs": [
+        [
+          60,
+          102
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "pair_products.1",
+      "inputs": [
+        [
+          60,
+          51
+        ],
+        [
+          60,
+          51
+        ]
+      ],
+      "output": [
+        60,
+        51
+      ]
+    },
+    {
+      "module": "readout",
+      "inputs": [
+        [
+          60,
+          51
+        ]
+      ],
+      "output": [
+        60,
+        9
+      ]
+    }
+  ],
+  "learned_tensor_products": {
+    "layers.0.message.tp": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "1x0e+1x1o+1x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 225,
+      "shared_weights": false,
+      "internal_weights": false
+    },
+    "layers.0.products.0": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 1215,
+      "shared_weights": true,
+      "internal_weights": true
+    },
+    "layers.1.message.tp": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "1x0e+1x1o+1x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 225,
+      "shared_weights": false,
+      "internal_weights": false
+    },
+    "layers.1.products.0": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 1215,
+      "shared_weights": true,
+      "internal_weights": true
+    },
+    "pair_init.tp": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e+3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "1x0e+1x1o+1x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 450,
+      "shared_weights": false,
+      "internal_weights": false
+    },
+    "pair_updates.0.tp": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e+3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "1x0e+1x1o+1x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 450,
+      "shared_weights": false,
+      "internal_weights": false
+    },
+    "pair_updates.1.tp": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e+3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "1x0e+1x1o+1x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 450,
+      "shared_weights": false,
+      "internal_weights": false
+    },
+    "pair_products.0": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 1215,
+      "shared_weights": true,
+      "internal_weights": true
+    },
+    "pair_products.1": {
+      "in1": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "in2": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "out": "3x0e+3x1o+3x1e+3x2o+3x2e",
+      "weight_numel": 1215,
+      "shared_weights": true,
+      "internal_weights": true
+    }
+  }
+}

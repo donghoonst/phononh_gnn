@@ -6,6 +6,12 @@
 
 공과 용수철의 움직임에서 시작해 원자 이웃 관계, GNN 학습, 힘 상수, 포논 그래프까지 차근차근 설명합니다. 12개 장과 수식·용어·검증 근거 부록을 담았으며, 노트북 실행 순서와 현재 확인된 성과·남은 문제도 함께 정리했습니다.
 
+### 모델 안을 그림으로 따라가기
+
+**[모델 구조와 Tensor Product 그림 해설](docs/MODEL_TENSOR_PRODUCT_GUIDE_KO.md)** · **[인쇄용 PDF — 29쪽](docs/MODEL_TENSOR_PRODUCT_GUIDE_KO.pdf)** · **[PDF 다운로드](https://github.com/donghoonst/phononh_gnn/raw/refs/heads/main/docs/MODEL_TENSOR_PRODUCT_GUIDE_KO.pdf)**
+
+8개 다이어그램으로 전체 구조에서 RadialTP, 원자 메시지·attention·correlation, Gate, pair 갱신, IFC 출력까지 이어서 설명합니다. 두 벡터의 작은 숫자 예제와 실제 텐서 크기를 포함하며, [실행 예제](scripts/explain_tensor_products.py)로 Tensor Product의 회전 규칙과 모델 내부 shape를 직접 확인할 수 있습니다.
+
 ## 한국어 통합 주피터 노트북
 
 **[IFC2_All_in_One_Korean.ipynb 열기](notebooks/IFC2_All_in_One_Korean.ipynb)** · **[노트북 파일 다운로드](https://github.com/donghoonst/phononh_gnn/raw/refs/heads/main/notebooks/IFC2_All_in_One_Korean.ipynb)**
